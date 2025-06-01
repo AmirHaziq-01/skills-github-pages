@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Path to Success: Achieving My Career Dreams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">Web Design & Development</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="step-by-step.html">Guide</a>
+        <a href="inspiration.html">Inspiration</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="combined-about-hero">
+      <div class="hero-left">
+        <h1>Creative Strategist in Digital Branding</h1>
+        <p class="hero-subheading">Shaping brands. Inspiring minds. Building digital impact.</p>
+        <button class="cta-button" id="get-started-btn">Contact Me</button>
+      </div>
+      <section id="about-me" class="about-section">
+        <div style="text-align: center;">
+          <img src="image/IMG_2509.png" alt="Profile image of Ajik" class="profile-image polaroid" />
+        </div>
+        <h2>About Me</h2>
+
+        <p><strong>Terengganu, Malaysia</strong> | Branding & Strategy Enthusiast</p>
+        <p>Hello. <br> My name is Amir Haziqrashdan, but you can call me Ajik.  
+        I’ve always been obsessed with the power of creativity. Not just to entertain, but to connect, inspire, and leave an emotional mark.</p>
+
+        <p>My love for storytelling, branding, and digital strategy pulled me into the world of creative campaigns. A place where visuals meet intention. Where messaging becomes emotion. I believe a good brand doesn’t just catch your eye. It stays in your mind. It earns your heart.</p>
+
+        <p>This website is my personal journey. The steps I’m taking, the people who push me forward, and the tools that shape me into the strategist I want to be. A strategist who makes people feel something real.</p>
+      </section>
+    </section>
+
+    <section id="why-creative-strategist" class="why-section">
+      <h2>Why a Creative Strategist in Digital Branding?</h2>
+      <p>
+        Because branding is storytelling with purpose. As a Creative Strategist, I want to become the brain behind powerful messages, the one who connects audiences to brands through visuals, emotions, and clever campaigns. In today’s digital age, strategy isn’t optional... it’s everything.
+      </p>
+      <ul>
+        <li>Shaping brand narratives across digital platforms</li>
+        <li>Analyzing consumer trends and behavior</li>
+        <li>Leading creative campaigns that resonate emotionally</li>
+        <li>Collaborating with designers, marketers, and data analysts</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>by Amir Haziqrashdan | Designed with heart</p>
+  </footer>
+
+<script>
+  document.getElementById('get-started-btn').addEventListener('click', function() {
+    window.location.href = 'mailto:s231420021@studentmail.unimap.edu.my';
+  });
+
+  // Fade-in animation on scroll for hero heading
+  function onScroll() {
+    const heroHeading = document.querySelector('.hero-left h1');
+    const rect = heroHeading.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.8) {
+      heroHeading.classList.add('visible');
+      window.removeEventListener('scroll', onScroll);
+    }
+
+    // Slide out h2 headings when scrolling down
+    const headings = document.querySelectorAll('h2');
+    headings.forEach(heading => {
+      const headingRect = heading.getBoundingClientRect();
+      if (headingRect.top < 0) {
+        heading.classList.add('slide-out');
+      } else {
+        heading.classList.remove('slide-out');
+      }
+    });
+  }
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('load', onScroll);
+</script>
+</body>
+</html>
